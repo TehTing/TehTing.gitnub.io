@@ -1,9 +1,52 @@
 <!DOCTYPE = html>
 <html lang = "zh-TW">
 <head>
-		<title>標題</title>
-		<link rel="stylesheet" href="檔案位址">
+		<title>閃亮亮的簡歷</title>
+		<link rel="stylesheet" href="mystyle.css">
 	</head>
 	<body>
+		<center>
+			<div id="title">
+				<h1><br><br>鄭點</h1>
+				<h4>央央資管系二年級</h4>
+			</div>
+			<?php
+				date_default_timezone_set('Asia/Taipei');
+				$time = date("H");
+				
+				if ($time < "12"){
+					echo "おはようございます";
+				} elif ($time < "17"){
+					echo "こんにちは";
+				}elif ($time < "21"){
+					echo "こんばんは";
+				}else
+					echo "おやすみなさい";
+			?>
+			<img id="shot" src="images/shot.png">
+			<div class="textblock">
+				<h2>關於我</h2>
+				<p>我是一個活潑外向的人，喜歡全心投入活動、團隊合力完成任務的感覺。
+					重要的特質是邏輯清晰、喜好創意，相信有創意的作品才能脫穎而出。
+					希望能夠多學習新的技能、累積實務經驗，在大學期間進入企業實習、開拓視野，並且認識許多夥伴。
+					這些是我預期在貴公司能夠獲得的經驗。
+					<br>因為要湊字數所以再打一遍<br>
+					我是一個活潑外向的人，喜歡全心投入活動、團隊合力完成任務的感覺。
+					重要的特質是邏輯清晰、喜好創意，相信有創意的作品才能脫穎而出。
+					希望能夠多學習新的技能、累積實務經驗，在大學期間進入企業實習、開拓視野，並且認識許多夥伴。
+					這些是我預期在貴公司能夠獲得的經驗。
+				</p>
+			</div>
+			<div class="textblock">
+				<h2>了解更多</h2>
+				<button type="button" onclick="showMore()">解鎖更多能力</button>
+				<p id="show" class="textblock"></p>
+			</div>
+			<script>
+				function showMore()	{
+					document.getElementById("show").innerHTML = "想像力就是你的超能力";
+				}
+			</script>
+		</center>	
 	</body>
 </html>
